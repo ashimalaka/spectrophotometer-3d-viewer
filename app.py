@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify
 import json
 import os
 
@@ -31,5 +31,13 @@ def get_components_by_category(category):
     filtered = [c for c in components_data['components'] if c['category'] == category]
     return jsonify({'components': filtered})
 
+
+def run_server():
+    host = os.environ.get('HOST', '0.0.0.0')
+    port = int(os.environ.get('PORT', '5000'))
+    debug = os.environ.get('FLASK_DEBUG', '0').lower() in ('1', 'true', 'yes')
+    app.run(host=host, port=port, debug=debug, use_reloader=debug)
+
+
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    run_server()
