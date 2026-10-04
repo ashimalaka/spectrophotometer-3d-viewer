@@ -1,0 +1,124 @@
+{
+  "components": [
+    {
+      "id": "light_source",
+      "name": "Light Source",
+      "category": "internal",
+      "description": "Halogen lamp or LED that provides the light beam for spectrophotometry",
+      "position": {"x": -2, "y": 0, "z": -3},
+      "color": "#FFD700"
+    },
+    {
+      "id": "entrance_slit",
+      "name": "Entrance Slit",
+      "category": "internal",
+      "description": "Narrows the beam of light to increase spectral resolution",
+      "position": {"x": -1.5, "y": 0, "z": -2},
+      "color": "#C0C0C0"
+    },
+    {
+      "id": "monochromator",
+      "name": "Monochromator",
+      "category": "internal",
+      "description": "Separates light into individual wavelengths using a prism or diffraction grating",
+      "position": {"x": 0, "y": 0, "z": -1.5},
+      "color": "#4169E1"
+    },
+    {
+      "id": "exit_slit",
+      "name": "Exit Slit",
+      "category": "internal",
+      "description": "Allows only desired wavelengths to pass through to the sample",
+      "position": {"x": 1.5, "y": 0, "z": -1},
+      "color": "#C0C0C0"
+    },
+    {
+      "id": "cuvette_holder",
+      "name": "Cuvette Holder",
+      "category": "internal",
+      "description": "Holds the sample cuvette in the light path for measurement",
+      "position": {"x": 2.5, "y": 0, "z": 0},
+      "color": "#8B4513"
+    },
+    {
+      "id": "detector",
+      "name": "Detector (Photodiode)",
+      "category": "internal",
+      "description": "Converts transmitted light into an electrical signal for measurement",
+      "position": {"x": 3.5, "y": 0, "z": 1},
+      "color": "#000000"
+    },
+    {
+      "id": "reference_beam",
+      "name": "Reference Beam Path",
+      "category": "internal",
+      "description": "Beam path that allows for blank/reference measurements",
+      "position": {"x": 1, "y": 2, "z": 0},
+      "color": "#00FF00"
+    },
+    {
+      "id": "power_button",
+      "name": "Power Button",
+      "category": "external",
+      "description": "Turns the spectrophotometer on and off",
+      "position": {"x": -2.5, "y": 2.5, "z": -2},
+      "color": "#FF0000"
+    },
+    {
+      "id": "display_screen",
+      "name": "Display Screen",
+      "category": "external",
+      "description": "LCD or digital display showing absorbance, transmittance, or wavelength readings",
+      "position": {"x": -2.5, "y": 1.5, "z": -2},
+      "color": "#000080"
+    },
+    {
+      "id": "keypad",
+      "name": "Keypad/Control Buttons",
+      "category": "external",
+      "description": "Buttons for input, menu navigation, and measurement control",
+      "position": {"x": -2.5, "y": 0.5, "z": -2},
+      "color": "#A9A9A9"
+    },
+    {
+      "id": "sample_compartment",
+      "name": "Sample Compartment",
+      "category": "external",
+      "description": "External opening where cuvettes are inserted for measurement",
+      "position": {"x": 2.5, "y": 2, "z": 0},
+      "color": "#696969"
+    },
+    {
+      "id": "wavelength_control",
+      "name": "Wavelength Selector",
+      "category": "external",
+      "description": "Dial or digital input to select measurement wavelength (typically 340-700 nm)",
+      "position": {"x": -2.5, "y": 3, "z": -2},
+      "color": "#FF6347"
+    },
+    {
+      "id": "data_port",
+      "name": "Data Port (USB/RS232)",
+      "category": "external",
+      "description": "Connection port for data transfer to computer or network",
+      "position": {"x": -3, "y": -2.5, "z": -2},
+      "color": "#1E90FF"
+    },
+    {
+      "id": "power_cord",
+      "name": "Power Cord",
+      "category": "external",
+      "description": "AC power supply connection for the instrument",
+      "position": {"x": 3, "y": -2.5, "z": -2},
+      "color": "#000000"
+    },
+    {
+      "id": "housing",
+      "name": "Main Housing/Chassis",
+      "category": "external",
+      "description": "Protective enclosure containing all internal optical and electronic components",
+      "position": {"x": 0, "y": 0, "z": 0},
+      "color": "#D3D3D3"
+    }
+  ]
+}

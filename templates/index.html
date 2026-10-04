@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spectrophotometer 3D Viewer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/controls/OrbitControls.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🔬 Spectrophotometer 3D Viewer</h1>
+            <p class="subtitle">Explore internal and external components in 360°</p>
+        </header>
+
+        <div class="main-content">
+            <div class="viewer-section">
+                <div id="canvas-container" class="canvas-container"></div>
+                
+                <div class="controls">
+                    <button id="rotate-btn" class="control-btn active" title="Rotate view">🔄 Rotate</button>
+                    <button id="internal-btn" class="control-btn" title="Show internal components">🔍 Internal</button>
+                    <button id="external-btn" class="control-btn" title="Show external components">📦 External</button>
+                    <button id="all-btn" class="control-btn active" title="Show all components">🔗 All</button>
+                    <button id="reset-btn" class="control-btn" title="Reset view">↺ Reset</button>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="internal">Internal Components</button>
+                    <button class="tab-btn" data-tab="external">External Components</button>
+                    <button class="tab-btn" data-tab="all">All Components</button>
+                </div>
+
+                <div class="tab-content active" id="internal-tab">
+                    <div id="internal-list" class="component-list"></div>
+                </div>
+
+                <div class="tab-content" id="external-tab">
+                    <div id="external-list" class="component-list"></div>
+                </div>
+
+                <div class="tab-content" id="all-tab">
+                    <div id="all-list" class="component-list"></div>
+                </div>
+
+                <div class="component-detail" id="component-detail">
+                    <h3 id="detail-name">Select a component</h3>
+                    <p id="detail-description">Click on any component to view details</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scene.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/components.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/ui.js') }}"></script>
+</body>
+</html>
